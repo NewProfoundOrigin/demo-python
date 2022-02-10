@@ -30,8 +30,3 @@ def play_with_magic_numbers():
     for elem in magic_numbers:
         magic_numbers.add(get_next(elem))
     return magic_numbers
-
-
-*FIRST = [1, 2, 3]
-(*FIRST,) = [1, 2, 3]
-*FIRST, a, b = [1, 2, 3]
