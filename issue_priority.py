@@ -30,3 +30,6 @@ def play_with_magic_numbers():
     for elem in magic_numbers:
         magic_numbers.add(get_next(elem))
     return magic_numbers
+
+if __name__ == 'main':
+    return 'test'
