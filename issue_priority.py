@@ -12,7 +12,7 @@ class BaseOne:
 
 
 class Child(Base, BaseOne, Base, BaseOne):
-    """Some Child class """
+    """Some Child class"""
 
 
 class ChildOne(Base, BaseOne, Base, BaseOne, abc.ABC, abc.ABCMeta, abc.ABCMeta):
