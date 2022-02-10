@@ -20,8 +20,9 @@ class ChildOne(Base, BaseOne, Base, BaseOne, abc.ABC, abc.ABCMeta, abc.ABCMeta):
 
 
 def get_number(min_max=[1, 10]):
-  assert all([isinstance(i, int) for i in min_max])
-  return random.randint(*min_max)
+    assert all([isinstance(i, int) for i in min_max])
+    return random.randint(*min_max)
+
 
 def play_with_magic_numbers():
     magic_numbers = {0, 1, 1, 2, 3, 5}
