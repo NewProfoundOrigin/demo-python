@@ -1,5 +1,6 @@
 import abc
 
+
 class Base:
     def __init__(self):
         self.base = 1
