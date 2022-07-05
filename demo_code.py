@@ -65,7 +65,7 @@ def main(options: dict = {}) -> str:
         value = iter(value)
 
     sorted(value, key=lambda k: len(k))
-    f = open("/tmp/.deep.toml", "r")
+
     f = open("/tmp/.deepsource.toml", "r")
     f.write("config file.")
     f.close()
