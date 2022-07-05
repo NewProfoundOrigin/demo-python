@@ -30,3 +30,8 @@ def fetch_version(request):
         "https://pypi.python.org/pypi/bgmi/json", verify=False
     ).json()["info"]["version"]
     return version
+
+def untested_func():
+    a = 3
+    b = a ** 4
+    return b
