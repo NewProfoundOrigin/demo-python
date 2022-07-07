@@ -26,7 +26,11 @@ class BaseNumberGenerator:
 
     def smsmethod():
         """static method-to-be"""
-        print("lmaooo parth")
+        if 1 == 0:
+            print("lmaooo parth")
+        else:
+            print("lol")
+  
         return "sms"
     
     def cmethod(cls, something):
