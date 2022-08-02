@@ -11,22 +11,25 @@ class BaseOne:
         self.base_one = 2
 
 
-class Child(Base, BaseOne, Base, BaseOne):
+class Child(Base, BaseOne):
     """Some Child class"""
 
 
-class ChildOne(Base, BaseOne, Base, BaseOne, abc.ABC, abc.ABCMeta, abc.ABCMeta):
+class ChildOne(Base, BaseOne, abc.ABC, abc.ABCMeta):
     """Class with duplicate bases"""
 
 
-def get_number(min_max=[1, 10]):
-    assert all([isinstance(i, int) for i in min_max])
+def get_number(min_max=None):
+    if min_max is None:
+        min_max = [1, 10]
+    if not all([isinstance(i, int) for i in min_max]):
+        raise AssertionError
     return random.randint(*min_max)
 
 
 def play_with_magic_numbers():
-    magic_numbers = {0, 1, 1, 2, 3, 5}
+    magic_numbers = {0, 1, 2, 3, 5}
 
-    for elem in magic_numbers:
+    for elem in magic_numbers.copy():
         magic_numbers.add(get_next(elem))
     return magic_numbers
