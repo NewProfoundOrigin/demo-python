@@ -55,7 +55,6 @@ class ImaginaryNumber:
 
 
 def main(options: dict = {}) -> str:
-    pdb.set_trace()
     if "run" in options:
         value = options["run"]
     else:
@@ -81,19 +80,16 @@ def moon_chooser(moon, moons=["europa", "callisto", "phobos"]):
 
 
 def get_users():
-    pdb.set_trace()
     raw = '"username") AS "val" FROM "auth_user" WHERE "username"="admin" --'
     return User.objects.annotate(val=RawSQL(raw, []))
 
 
 def get_users_copy():
-    pdb.set_trace()
     raw = '"username") AS "val" FROM "auth_user" WHERE "username"="admin" --'
     return User.objects.annotate(val=RawSQL(raw, []))
 
 
 def tar_something():
-    pdb.set_trace()
     context = ssl._create_stdlib_context()
     os.tempnam("dir1")
     subprocess.Popen("/bin/chown *", shell=True)
