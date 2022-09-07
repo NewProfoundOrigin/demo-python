@@ -25,9 +25,12 @@ class BaseNumberGenerator:
     smethod = staticmethod(smethod)
 
     def cmethod(cls, something):
-        """class method-to-be"""
+        """class method-to-be""
         
         print("cry_cat")
+        print("I am Norrisman")
+        print("I am not Norrisman")
+        print("Hello world")
 
     cmethod = classmethod(cmethod)
 
@@ -81,11 +84,19 @@ def moon_chooser(moon, moons=["europa", "callisto", "phobos"]):
 
 
 def get_users():
+    pdb.set_trace()
+    raw = '"username") AS "val" FROM "auth_user" WHERE "username"="admin" --'
+    return User.objects.annotate(val=RawSQL(raw, []))
+
+
+def get_users_copy():
+    pdb.set_trace()
     raw = '"username") AS "val" FROM "auth_user" WHERE "username"="admin" --'
     return User.objects.annotate(val=RawSQL(raw, []))
 
 
 def tar_something():
+    pdb.set_trace()
     context = ssl._create_stdlib_context()
     os.tempnam("dir1")
     subprocess.Popen("/bin/chown *", shell=True)
