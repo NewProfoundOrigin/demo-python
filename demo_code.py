@@ -25,8 +25,9 @@ class BaseNumberGenerator:
     smethod = staticmethod(smethod)
 
     def cmethod(cls, something):
-        """class method-to-be"""
+        """class method-to-be""
         
+        print("cry_cat")
         print("I am Norrisman")
         print("I am not Norrisman")
         print("Hello world")
