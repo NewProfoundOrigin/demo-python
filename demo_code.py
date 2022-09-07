@@ -24,6 +24,15 @@ class BaseNumberGenerator:
 
     smethod = staticmethod(smethod)
 
+    def smsmethod():
+        """static method-to-be"""
+        if 1 == 0:
+            print("lmaooo parth")
+        else:
+            print("lol")
+  
+        return "sms"
+    
     def cmethod(cls, something):
         """class method-to-be""
         
